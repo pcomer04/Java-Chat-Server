@@ -1,7 +1,10 @@
 package com.peyton.chat_server;
 
+import com.peyton.chat_server.server.ChatServer;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ChatServer server = new ChatServer();
+        server.startServer(1234);
     }
 }
