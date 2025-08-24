@@ -4,6 +4,19 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/* The ChatServer exemplifies our process in this program. Every time a new client connects, it is started
+ * in a new thread. This allows concurrent communication between the clients within our process.
+ * 
+ * Responsibilities:
+ * - Start the Server - takes a port number and creates a server with a socket as well as an accompanying ChatRoom
+ * - Constantly Listen for Client Connections - listens and creates threads for new connections
+ * 
+ * Relationship to OOP:
+ * The server logic is encapsulated into this class and it manages all the things the server needs to while
+ * using ChatRoom and ClientHandler for their respective needs. Abstracts the details behind socket management 
+ * with the startServer() method. 
+ */
+
 public class ChatServer {
     ServerSocket chatServerSocket;
     ChatRoom serverChatRoom;
